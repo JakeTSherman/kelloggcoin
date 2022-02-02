@@ -27,3 +27,22 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+to_ben = blockchain[0][:amount] + blockchain[6][:amount]
+from_ben = blockchain[2][:amount] + blockchain[5][:amount]
+ben = to_ben - from_ben
+puts "Ben's KelloggCoin balance is #{ben}"
+
+to_brian = blockchain[1][:amount]
+from_brian = blockchain[3][:amount]
+brian = to_brian - from_brian
+puts "Brian's KelloggCoin balance is #{brian}"
+
+to_evan = blockchain[2][:amount] + blockchain[7][:amount]
+from_evan = blockchain[4][:amount]
+evan = to_evan - from_evan
+puts "Evan's KelloggCoin balance is #{evan}"
+
+to_anthony = blockchain[3][:amount] + blockchain[4][:amount] + blockchain[5][:amount]
+from_anthony = blockchain[6][:amount] + blockchain[7][:amount] 
+anthony = to_anthony - from_anthony
+puts "Anthony's KelloggCoin balance is #{anthony}"
