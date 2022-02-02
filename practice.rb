@@ -46,3 +46,17 @@ to_anthony = blockchain[3][:amount] + blockchain[4][:amount] + blockchain[5][:am
 from_anthony = blockchain[6][:amount] + blockchain[7][:amount] 
 anthony = to_anthony - from_anthony
 puts "Anthony's KelloggCoin balance is #{anthony}"
+
+puts " "
+# ALTERNATIVE METHOD
+
+ben2 = blockchain[0][:amount] - blockchain[2][:amount] - blockchain[5][:amount] + blockchain[6][:amount]
+brian2 = blockchain[1][:amount] - blockchain[3][:amount]
+evan2 = blockchain[2][:amount] - blockchain[4][:amount] + blockchain[7][:amount]
+anthony2 = blockchain[3][:amount] + blockchain[4][:amount] + blockchain[5][:amount] - blockchain[6][:amount] - blockchain[7][:amount]
+text = "'s KelloggCoin balance is "
+
+puts "Ben#{text} #{ben2}"
+puts "Brian#{text} #{brian2}"
+puts "Evan#{text} #{evan2}"
+puts "Anthony#{text} #{anthony2}"
