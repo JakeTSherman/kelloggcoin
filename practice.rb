@@ -60,3 +60,38 @@ puts "Ben#{text} #{ben2}"
 puts "Brian#{text} #{brian2}"
 puts "Evan#{text} #{evan2}"
 puts "Anthony#{text} #{anthony2}"
+
+puts " "
+# LOOPING METHOD
+
+bens_balance = 0
+brians_balance = 0
+evans_balance = 0
+anthonys_balance = 0
+
+for transaction in blockchain
+if transaction[:from_user] == "ben"
+  bens_balance = bens_balance - transaction[:amount]
+elsif transaction[:from_user] == "brian"
+  brians_balance = brians_balance - transaction[:amount]
+elsif transaction[:from_user] == "evan"
+  evans_balance = evans_balance - transaction[:amount]
+elsif transaction[:from_user] == "anthony"
+  anthonys_balance = anthonys_balance - transaction[:amount]
+end
+
+if transaction[:to_user] == "ben"
+  bens_balance = bens_balance + transaction[:amount]
+elsif transaction[:to_user] == "brian"
+  brians_balance = brians_balance + transaction[:amount]
+elsif transaction[:to_user] == "evan"
+  evans_balance = evans_balance + transaction[:amount]
+elsif transaction[:to_user] == "anthony"
+  anthonys_balance = anthonys_balance + transaction[:amount]
+end
+end 
+
+puts "Ben#{text} #{bens_balance}"
+puts "Brian#{text} #{brians_balance}"
+puts "Evan#{text} #{evans_balance}"
+puts "Anthony#{text} #{anthonys_balance}"
